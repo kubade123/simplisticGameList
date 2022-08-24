@@ -1,4 +1,4 @@
-package com.example.aplikasipertama.ui.dashboard
+package com.example.aplikasipertama.ui.ListGame
 
 import android.content.Intent
 import android.os.Bundle

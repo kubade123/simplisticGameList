@@ -14,7 +14,7 @@
         android:theme="@style/Theme.AplikasiPertama"
         tools:targetApi="31">
         <activity
-            android:name=".ui.dashboard.ListDetailActivity"
+            android:name=".ui.ListGame.ListDetailActivity"
             android:parentActivityName=".MainActivity"
             android:exported="false" />
         <activity

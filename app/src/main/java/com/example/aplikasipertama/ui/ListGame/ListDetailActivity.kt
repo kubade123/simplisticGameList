@@ -1,4 +1,4 @@
-package com.example.aplikasipertama.ui.dashboard
+package com.example.aplikasipertama.ui.ListGame
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
