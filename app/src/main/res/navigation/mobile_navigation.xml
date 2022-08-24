@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_list_game">
+
+    <fragment
+        android:id="@+id/nav_list_game"
+        android:name="com.example.aplikasipertama.ui.dashboard.ListFragment"
+        android:label="@string/title_list_game"
+        tools:layout="@layout/fragment_list_game" />
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.example.aplikasipertama.ui.home.ProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/nav_favorite"
+        android:name="com.example.aplikasipertama.ui.notifications.FavoriteFragment"
+        android:label="@string/title_favorite"
+        tools:layout="@layout/fragment_favorite" />
+</navigation>

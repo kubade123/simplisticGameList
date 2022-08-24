@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">AplikasiPertama</string>
+    <string name="title_list_game">List Game</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_favorite">Favorite</string>
+    <string name="profile_name">Mufid Naufal Baay</string>
+    <string name="profile_email">mibe_yo@yahoo.com</string>
+    <string name="games_name">Game Title</string>
+    <string name="games_desc">Game Description</string>
+</resources>
