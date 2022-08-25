@@ -3,16 +3,20 @@ package com.example.aplikasipertama.ui.ListGame
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.example.aplikasipertama.Game
+import com.example.aplikasipertama.GamesData
 import com.example.aplikasipertama.R
-
+var list: ArrayList<Game> = arrayListOf()
 class ListGameAdapter(private val listGame: ArrayList<Game>): RecyclerView.Adapter<ListGameAdapter.ListViewHolder>() {
     private lateinit var onItemClickCallback: OnItemClickCallback
+
 
     fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback) {
         this.onItemClickCallback = onItemClickCallback
@@ -22,6 +26,7 @@ class ListGameAdapter(private val listGame: ArrayList<Game>): RecyclerView.Adapt
         var tvName: TextView = itemView.findViewById(R.id.item_name)
         var tvDesc: TextView = itemView.findViewById(R.id.item_desc)
         var imgPhoto: ImageView = itemView.findViewById(R.id.img_item)
+        var btnFavorite: Button = itemView.findViewById(R.id.btn_set_favorite)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
@@ -41,7 +46,9 @@ class ListGameAdapter(private val listGame: ArrayList<Game>): RecyclerView.Adapt
         holder.tvDesc.text = game.detail
         holder.itemView.setOnClickListener {
             onItemClickCallback.onItemClicked(listGame[holder.adapterPosition]) }
+        holder.btnFavorite.setOnClickListener{listGame[holder.adapterPosition].addFavorite(listGame[holder.adapterPosition]); Toast.makeText(holder.itemView.context, "Favorite " + listGame[holder.adapterPosition].name, Toast.LENGTH_SHORT).show()}
     }
+
 
     override fun getItemCount(): Int {
         return listGame.size

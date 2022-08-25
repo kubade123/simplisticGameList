@@ -16,7 +16,7 @@ import com.example.aplikasipertama.R
 
 class ListFragment : Fragment() {
     private lateinit var rvGames: RecyclerView
-    private var list: ArrayList<Game> = arrayListOf()
+   // private var list: ArrayList<Game> = arrayListOf()
 
 
     override fun onCreateView(
@@ -24,7 +24,7 @@ class ListFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        list.addAll(GamesData.listData)
+      //  list.addAll(GamesData.listData)
         return inflater.inflate(R.layout.fragment_list_game, container, false)
     }
 
@@ -34,7 +34,7 @@ class ListFragment : Fragment() {
         rvGames = view.findViewById(R.id.rv_games)
         rvGames.layoutManager = layoutManager
         rvGames.setHasFixedSize(true)
-        val listGameAdapter = ListGameAdapter(list)
+        val listGameAdapter = ListGameAdapter(GamesData.listData)
         rvGames.adapter = listGameAdapter
 
         listGameAdapter.setOnItemClickCallback(object : ListGameAdapter.OnItemClickCallback {
