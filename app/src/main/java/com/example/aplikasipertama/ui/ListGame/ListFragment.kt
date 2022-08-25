@@ -47,7 +47,7 @@ class ListFragment : Fragment() {
         val intent = Intent(context, ListDetailActivity::class.java)
         intent.putExtra("name", game.name)
         intent.putExtra("photo", game.photo)
-        intent.putExtra("detail", game.detail)
+        intent.putExtra("deskripsi",game.desc)
         startActivity(intent)
     }
 

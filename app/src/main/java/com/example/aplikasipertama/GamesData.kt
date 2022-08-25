@@ -18,10 +18,23 @@ object GamesData {
             "Game MOBA",
             "Game Souls Like",
             "Game Adventure",
-            "Game simulasi",
+            "Game Simulasi",
             "Game Survival",
             "Game Rpg Fantasi",
             "Game platform kucing")
+
+    private val gameDesc = arrayOf("Game First-Person Shooter yang memiliki tema pertempuran antara counter-terrorist melawan terrorist",
+            "Instalasi ketiga dari seri Dragon Age yang menceritakan tentang seorang Inquisitor yang muncul di tengah-tengah kekacauan dunia untuk merestorasi kedamaian dunia",
+            "Title original yang menjadi instalasi pertama pada seri dragon age",
+            "Game Multiplayer Online Battle Arena yang bertema pertempuran antara kubu Dire dan kubu Radiant dalam mempertahankan Ancient yang masing-masing pihak",
+            "Game gebrakan terbaru dari FromSoftware yang mengguncang dunia game dengan inovasi pada genre Open-World RPG yang berbeda dari yang lain",
+            "Bertemakan anime, Genshin Impact merupakan game yang viral akan inovasinya pada game cross-platform yang dapat dimainkan dan saling terkoneksi antara Smartphone, Playstation, dan PC.",
+            "Game klasik dimana pemain membudidayakan aquarium untuk point yang dibutuhkan untuk menyelsaikan stage. Hati-hati akan monster yang bersembunyi di bayangan ",
+            "Bertahan hidup di dunia yang sudah terlelap oleh lautan. Tugasmu adalah bertahan hidup dan mencari siapa dalang di balik semua ini dan temukan rekan survivor yang lain",
+            "Seorang tahanan yang akan di eksekusi mati, itu jika sebuah 'kejadian' tersebut tidak terjadi. Temukan jati dirimu dan berpetualang pada dunia skyrim",
+            "Sebuah game puzzle adventure berlatar dunia post-apocalypse dimana tugasmu sebagai kucing untuk memecahkan misteri dibalik hilangnya manusia dan invasi robot yang memerintah dunia"
+
+    )
 
     private val gameImages = intArrayOf(R.drawable.csgo,
             R.drawable.da_inquisition,
@@ -42,6 +55,7 @@ object GamesData {
                 game.name = gameNames[i]
                 game.detail = gameDetails[i]
                 game.photo = gameImages[i]
+                game.desc = gameDesc[i]
                 list.add(game)
             }
             return list

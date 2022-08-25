@@ -16,7 +16,7 @@ class ListDetailActivity : AppCompatActivity() {
 
         val name = intent.getStringExtra("name")
         val photo = intent.getIntExtra("photo",0)
-        val desc = intent.getStringExtra("detail")
+        val desc = intent.getStringExtra("deskripsi")
         var tvDetailName: TextView = findViewById(R.id.detail_name)
         var tvDetailDesc: TextView = findViewById(R.id.detail_desc)
         var imgDetailPhoto: ImageView = findViewById(R.id.detail_image)
