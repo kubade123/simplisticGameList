@@ -12,12 +12,13 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.example.aplikasipertama.Game
 import com.example.aplikasipertama.R
+import com.example.aplikasipertama.ui.ListGame.list
 
 class FavoriteAdapter(private val listGame: ArrayList<Game>): RecyclerView.Adapter<FavoriteAdapter.ListViewHolder>()  {
     inner class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var tvName: TextView = itemView.findViewById(R.id.item_name)
         var imgPhoto: ImageView = itemView.findViewById(R.id.img_item)
-       // var btnFavorite: Button = itemView.findViewById(R.id.btn_set_favorite)
+        var btnDelete: Button = itemView.findViewById(R.id.btn_delete_favorite)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
@@ -33,7 +34,11 @@ class FavoriteAdapter(private val listGame: ArrayList<Game>): RecyclerView.Adapt
             .apply(RequestOptions().override(256,256))
             .into(holder.imgPhoto)
         holder.tvName.text = game.name
-       // holder.btnFavorite.setOnClickListener{listGame[holder.adapterPosition].addFavorite() ; Toast.makeText(holder.itemView.context, "Favorite " + listGame[holder.adapterPosition].name, Toast.LENGTH_SHORT).show()}
+        holder.btnDelete.setOnClickListener{listGame[holder.adapterPosition].removeFavorite(listGame[holder.adapterPosition]);
+            Toast.makeText(holder.itemView.context, "Unfavorite " + listGame[holder.adapterPosition].name, Toast.LENGTH_SHORT).show();
+            list.removeAt(holder.adapterPosition);
+            notifyItemRemoved(holder.adapterPosition);
+            notifyItemRangeChanged(position,itemCount)}
     }
     override fun getItemCount(): Int {
         return listGame.size

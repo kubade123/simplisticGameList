@@ -17,6 +17,5 @@ data class Game (
     }
     fun removeFavorite(favList : Game) {
         favorite = false
-        list.remove(favList)
     }
 }
