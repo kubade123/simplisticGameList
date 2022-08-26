@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">AplikasiPertama</string>
+    <string name="app_name">My Simplistic Game List</string>
     <string name="title_list_game">List Game</string>
     <string name="title_profile">Profile</string>
     <string name="title_favorite">Favorite</string>
