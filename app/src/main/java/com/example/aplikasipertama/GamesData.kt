@@ -12,16 +12,16 @@ object GamesData {
             "Elder Scroll Skyrim",
             "Stray")
 
-    private val gameDetails = arrayOf("game FPS, Strategy, Online",
-            "Game Strategy, Adventure, RPG",
-            "Game Strategy, Adventure, RPG",
-            "Game MOBA, Strategy",
-            "Game RPG, Souls-Like, Open World",
-            "Game Adventure, RPG, Online",
-            "Game Simulation, Arcade",
-            "Game Survival, Adventure, Sandbox",
-            "Game RPG, Fantasy, Adventure",
-            "Game Platformer, Puzzle, Adventure")
+    private val gameDetails = arrayOf("FPS, Strategy, Online",
+            "Strategy, Adventure, RPG",
+            "Strategy, Adventure, RPG",
+            "MOBA, Strategy",
+            "RPG, Souls-Like, Open World",
+            "Adventure, RPG, Online",
+            "Simulation, Arcade",
+            "Survival, Adventure, Sandbox",
+            "RPG, Fantasy, Adventure",
+            "Platformer, Puzzle, Adventure")
 
     private val gameDesc = arrayOf("Game First-Person Shooter yang memiliki tema pertempuran antara counter-terrorist melawan terrorist",
             "Instalasi ketiga dari seri Dragon Age yang menceritakan tentang seorang Inquisitor yang muncul di tengah-tengah kekacauan dunia untuk merestorasi kedamaian dunia",

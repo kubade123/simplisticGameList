@@ -9,4 +9,6 @@
     <string name="games_desc">Game Description</string>
     <string name="favorit">Favorit</string>
     <string name="share">share</string>
+    <string name="games_genre">genre</string>
+    <string name="favorite_yes_no">Favorite yes/no</string>
 </resources>

@@ -32,6 +32,8 @@
         app:layout_constraintTop_toBottomOf="@+id/detail_image"
         tools:ignore="MissingConstraints" />
 
+
+
     <TextView
         android:id="@+id/detail_desc"
         android:layout_width="match_parent"
@@ -44,17 +46,57 @@
         android:lineSpacingMultiplier="1"
         app:layout_constraintTop_toBottomOf="@id/detail_name"
         android:text="@string/games_desc"/>
-
-    <TextView
-        android:id="@+id/favorite_status"
+    <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
         android:layout_marginBottom="16dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintTop_toBottomOf="@id/detail_desc"
-        android:text="Favorite yes/no"/>
+        app:layout_constraintTop_toBottomOf="@id/detail_desc">
+        <TableRow
+            android:id="@+id/table_genre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:layout_marginEnd="16dp"
+                android:text="Genre" />
+            <TextView
+                android:id="@+id/detail_genre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:layout_weight="1"
+                android:text="@string/games_genre" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/table_favorite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="8dp"
+        >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:layout_marginEnd="16dp"
+                android:text="Favorite" />
+            <TextView
+                android:id="@+id/favorite_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:layout_weight="1"
+                android:text="@string/favorite_yes_no" />
+        </TableRow>
+    </TableLayout>
 
     <Button
         android:id="@+id/action_share"

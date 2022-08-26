@@ -43,7 +43,7 @@ class ListGameAdapter(private val listGame: ArrayList<Game>): RecyclerView.Adapt
             .into(holder.imgPhoto)
 
         holder.tvName.text = game.name
-        holder.tvDesc.text = game.detail
+        holder.tvDesc.text = "Game ${game.detail}"
         holder.itemView.setOnClickListener {
             onItemClickCallback.onItemClicked(listGame[holder.adapterPosition]) }
         holder.btnFavorite.setOnClickListener{listGame[holder.adapterPosition].addFavorite(listGame[holder.adapterPosition]); Toast.makeText(holder.itemView.context, "Favorite " + listGame[holder.adapterPosition].name, Toast.LENGTH_SHORT).show()}

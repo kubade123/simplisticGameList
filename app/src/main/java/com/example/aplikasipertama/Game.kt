@@ -1,6 +1,5 @@
 package com.example.aplikasipertama
 
-import android.webkit.RenderProcessGoneDetail
 import com.example.aplikasipertama.ui.ListGame.list
 
 data class Game (

@@ -19,22 +19,25 @@ class ListDetailActivity : AppCompatActivity() {
         val name = intent.getStringExtra("name")
         val photo = intent.getIntExtra("photo",0)
         val desc = intent.getStringExtra("deskripsi")
+        val genre = intent.getStringExtra("genre")
         val fav = intent.getBooleanExtra("favorit",false)
         val shareText = "Coba mainkan ${name}!"
         var tvDetailName: TextView = findViewById(R.id.detail_name)
         var tvDetailDesc: TextView = findViewById(R.id.detail_desc)
         var tvFavStatus: TextView = findViewById(R.id.favorite_status)
+        var tvGenre: TextView = findViewById(R.id.detail_genre)
         var imgDetailPhoto: ImageView = findViewById(R.id.detail_image)
         var buttonShare: Button = findViewById(R.id.action_share)
 
         tvDetailName.text = name
         tvDetailDesc.text = desc
+        tvGenre.text = genre
 
         if (fav){
-            tvFavStatus.text = "Merupakan salah satu game favorite saya"
+            tvFavStatus.text = "Yes"
         }
         else {
-            tvFavStatus.text = "Tidak termasuk game favorite saya"
+            tvFavStatus.text = "No"
         }
 
         imgDetailPhoto.setImageResource(photo)

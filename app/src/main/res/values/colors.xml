@@ -8,4 +8,9 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="middle_blue_green">#9EEFE5</color>
+    <color name="midnight_blue">#03045E</color>
+    <color name="star_command_blue">#0077B6</color>
+    <color name="pacific_blue">#00B4D8</color>
+    <color name="middle_blue">#90E0EF</color>
+    <color name="light_cyan">#CAF0F8</color>
 </resources>
