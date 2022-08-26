@@ -48,6 +48,7 @@ class ListFragment : Fragment() {
         intent.putExtra("name", game.name)
         intent.putExtra("photo", game.photo)
         intent.putExtra("deskripsi",game.desc)
+        intent.putExtra("favorit",game.favorite)
         startActivity(intent)
     }
 

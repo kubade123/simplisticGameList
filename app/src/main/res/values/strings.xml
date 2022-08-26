@@ -7,4 +7,6 @@
     <string name="profile_email">mibe_yo@yahoo.com</string>
     <string name="games_name">Game Title</string>
     <string name="games_desc">Game Description</string>
+    <string name="favorit">Favorit</string>
+    <string name="share">share</string>
 </resources>
