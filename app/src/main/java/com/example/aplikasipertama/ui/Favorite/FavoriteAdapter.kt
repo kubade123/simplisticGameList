@@ -1,5 +1,6 @@
 package com.example.aplikasipertama.ui.Favorite
 
+import android.os.SystemClock
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,7 +13,7 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.example.aplikasipertama.Game
 import com.example.aplikasipertama.R
-import com.example.aplikasipertama.ui.ListGame.list
+import com.example.aplikasipertama.ui.ListGame.favList
 
 class FavoriteAdapter(private val listGame: ArrayList<Game>): RecyclerView.Adapter<FavoriteAdapter.ListViewHolder>()  {
     inner class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -34,13 +35,34 @@ class FavoriteAdapter(private val listGame: ArrayList<Game>): RecyclerView.Adapt
             .apply(RequestOptions().override(256,256))
             .into(holder.imgPhoto)
         holder.tvName.text = game.name
-        holder.btnDelete.setOnClickListener{listGame[holder.adapterPosition].removeFavorite(listGame[holder.adapterPosition]);
+        holder.btnDelete.setSafeOnClickListener{listGame[holder.adapterPosition].removeFavorite(listGame[holder.adapterPosition]);
             Toast.makeText(holder.itemView.context, "Unfavorite " + listGame[holder.adapterPosition].name, Toast.LENGTH_SHORT).show();
-            list.removeAt(holder.adapterPosition);
+            favList.removeAt(holder.adapterPosition);
             notifyItemRemoved(holder.adapterPosition);
             notifyItemRangeChanged(position,itemCount)}
     }
     override fun getItemCount(): Int {
         return listGame.size
+    }
+
+    fun View.setSafeOnClickListener(onSafeClick: (View) -> Unit) {
+        val safeClickListener = SafeClickListener {
+            onSafeClick(it)
+        }
+        setOnClickListener(safeClickListener)
+    }
+
+}
+class SafeClickListener(
+    private var defaultInterval: Int = 1000,
+    private val onSafeCLick: (View) -> Unit
+) : View.OnClickListener {
+    private var lastTimeClicked: Long = 0
+    override fun onClick(v: View) {
+        if (SystemClock.elapsedRealtime() - lastTimeClicked < defaultInterval) {
+            return
+        }
+        lastTimeClicked = SystemClock.elapsedRealtime()
+        onSafeCLick(v)
     }
 }

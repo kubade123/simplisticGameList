@@ -6,18 +6,15 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.aplikasipertama.Game
-import com.example.aplikasipertama.GamesData
 import com.example.aplikasipertama.R
-import com.example.aplikasipertama.ui.ListGame.ListGameAdapter
-import com.example.aplikasipertama.ui.ListGame.list
+import com.example.aplikasipertama.ui.ListGame.favList
 
 
 class FavoriteFragment : Fragment() {
     private lateinit var rvFavorite: RecyclerView
-    private var listFav: ArrayList<Game> = list
+    private var listFav: ArrayList<Game> = favList
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

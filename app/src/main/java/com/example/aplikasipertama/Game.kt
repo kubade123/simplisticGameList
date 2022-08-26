@@ -1,7 +1,5 @@
 package com.example.aplikasipertama
 
-import com.example.aplikasipertama.ui.ListGame.list
-
 data class Game (
     var name: String = "",
     var detail: String = "",
@@ -11,8 +9,8 @@ data class Game (
 ) {
     fun addFavorite(favList : Game) {
         favorite = true
-        if (!list.contains(favList)) {
-            list.add(favList)
+        if (!com.example.aplikasipertama.ui.ListGame.favList.contains(favList)) {
+            com.example.aplikasipertama.ui.ListGame.favList.add(favList)
         }
     }
     fun removeFavorite(favList : Game) {

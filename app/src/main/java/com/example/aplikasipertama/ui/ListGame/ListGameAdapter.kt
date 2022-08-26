@@ -13,7 +13,7 @@ import com.bumptech.glide.request.RequestOptions
 import com.example.aplikasipertama.Game
 import com.example.aplikasipertama.GamesData
 import com.example.aplikasipertama.R
-var list: ArrayList<Game> = arrayListOf()
+var favList: ArrayList<Game> = arrayListOf()
 class ListGameAdapter(private val listGame: ArrayList<Game>): RecyclerView.Adapter<ListGameAdapter.ListViewHolder>() {
     private lateinit var onItemClickCallback: OnItemClickCallback
 
@@ -36,7 +36,6 @@ class ListGameAdapter(private val listGame: ArrayList<Game>): RecyclerView.Adapt
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
         val game = listGame[position]
-
         Glide.with(holder.itemView.context)
             .load(game.photo)
             .apply(RequestOptions().override(256,256))
